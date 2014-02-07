@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 # Try and get debian operating system
 # id, codename, and release
 

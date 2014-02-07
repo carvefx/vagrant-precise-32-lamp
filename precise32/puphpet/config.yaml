@@ -2,12 +2,12 @@
 vagrantfile-local:
     vm:
         box: precise32-official
-        box_url: 'http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box'
+        box_url: 'http://box.puphpet.com/debian-wheezy72-x64-vbox43.box'
         hostname: null
         network:
             private_network: 192.168.56.101
             forwarded_port:
-                8Tsl06DMm0Tq:
+                aBdFDU2sJ5Kt:
                     host: '8021'
                     guest: '22'
         provider:
@@ -26,7 +26,7 @@ vagrantfile-local:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            vagIZ4f2pPep:
+            3lPk67WJ5v07:
                 id: vagrant-root
                 source: 'e:/Work/projects'
                 target: /var/www
@@ -64,7 +64,7 @@ apache:
         - php
         - rewrite
     vhosts:
-        KT4WWj8xOy5T:
+        dTwpgo9WxlbS:
             servername: dev.local
             serveraliases:
                 - www.dev.local
@@ -86,9 +86,9 @@ php:
     modules:
         php:
             - cli
+            - curl
             - intl
             - mcrypt
-            - curl
         pear: {  }
         pecl:
             - pecl_http
@@ -111,11 +111,11 @@ drush:
     settings:
         drush.tag_branch: 6.x
 mysql:
-    root_password: 'root_pass'
+    root_password: root_pass
     phpmyadmin: '1'
     adminer: 0
     databases:
-        mYG3DGIccsV4:
+        HoIBQMkVx3BC:
             grant:
                 - ALL
             name: dev_db
